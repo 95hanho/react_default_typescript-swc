@@ -1,0 +1,28 @@
+context관련 파일이 2개 이상일 때 사용하기, 아닐 경우 providers에 같이넣기
+
+1. 기능별로 쪼개기
+로그인, 사용자 정보, 다크모드 설정, 설문 작성 등 "역할" 단위로 분리
+
+보통 중소형 규모에 적합
+
+src/
+└── contexts/
+    ├── AuthContext.tsx         // 로그인/로그아웃
+    ├── ThemeContext.tsx        // 다크모드/라이트모드
+    ├── ApplyInfoContext.tsx    // 설문 작성 상태
+
+2. 도메인별로 쪼개기
+user, survey, admin 등 도메인 중심으로 context를 묶음
+
+프로젝트 규모가 크고 도메인이 명확한 경우 적합
+
+src/
+└── contexts/
+    ├── user/
+    │   └── AuthContext.tsx
+    │   └── ProfileContext.tsx
+    ├── survey/
+    │   └── ApplyInfoContext.tsx
+    │   └── QuestionFlowContext.tsx
+    └── common/
+        └── ThemeContext.tsx

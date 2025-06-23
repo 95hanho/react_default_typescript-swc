@@ -1,0 +1,187 @@
+/* @font-face {
+    font-family: "Noto Sans KR";
+    src: url(../font/NotoSansKR-VariableFont_wght.ttf);
+    font-display: swap;
+} */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select {
+	font-family: "Noto Sans KR", sans-serif;
+}
+/* 스크롤 */
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(91, 90, 255);
+}
+::-webkit-scrollbar-track {
+	background-color: #eaeaea;
+	border-left: 1px solid #ccc;
+}
+ul,
+li {
+	list-style: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+html,
+body,
+#root,
+.wrapper {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font: normal 1rem/1.5 "Noto Sans KR", "Nanum Gothic", "Noto Serif KR", "Nanum Pen Script", "Roboto";
+	color: rgba(0, 0, 0, 0.85);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Noto Sans KR", "Nanum Gothic", "Noto Serif KR", "Nanum Pen Script", "Roboto";
+}
+strong,
+b {
+	line-height: 1;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.85);
+	text-decoration: none;
+}
+p {
+	margin-bottom: 0;
+}
+/* 투명버튼 접근성 고려한 클래스이름 블라인드 */
+.blind {
+	display: block;
+	text-indent: -2000px;
+	overflow: hidden;
+}
+header,
+main,
+footer,
+section,
+nav,
+aside {
+	display: block;
+}
+.hide {
+	display: none !important;
+}
+button {
+	border: 0 none;
+	cursor: pointer;
+	background-color: transparent;
+}
+a {
+	text-decoration: none;
+}
+img {
+	border-style: none;
+	max-width: 100%;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+	user-select: none;
+	/*  */
+	/* -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none; */
+}
+.c_red {
+	color: red !important;
+}
+.c_green {
+	color: green !important;
+}
+.c_mediumseagreen {
+	color: mediumseagreen !important;
+}
+.c_blue {
+	color: blue !important;
+}
+.c_black {
+	color: #000 !important;
+}
+.c_gray {
+	color: gray !important;
+}
+.c_darkgray {
+	color: darkgray !important;
+}
+.c_yellow {
+	color: yellow !important;
+}
+.c_white {
+	color: #fff !important;
+}
+.c_warning {
+	color: #ffc041 !important;
+}
+.f_bold {
+	font-weight: bold !important;
+}
+.align_left {
+	text-align: left !important;
+}
+.align_right {
+	text-align: right !important;
+}
+.align_center {
+	text-align: center !important;
+}
+.read-only {
+	background-color: cornsilk !important;
+	border: 1px solid black;
+}
+.transparent {
+	opacity: 0.2;
+}
+.flex_center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inline-block {
+	display: inline-block;
+}
+.isLink_btn {
+	cursor: pointer;
+}
+.isLink_btn:hover {
+	text-decoration: underline;
+}
+.text_readonly {
+	background-color: navajowhite !important;
+}
+.f-left {
+	float: left;
+}
+.f-right {
+	float: right;
+}

@@ -1,0 +1,5 @@
+store.ts => configureStore로 Redux store 생성 및 타입 정의
+rootReducer.ts (또는 reducer.ts) => combineReducers로 여러 slice 통합
+hooks.ts (선택) => useAppDispatch, useAppSelector와 같은 타입 안전한 훅 정의
+middleware.ts (선택) => 커스텀 미들웨어 설정 시 사용
+persist.ts (선택) => redux-persist 설정이 필요할 경우 사용

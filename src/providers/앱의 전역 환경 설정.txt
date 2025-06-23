@@ -1,0 +1,8 @@
+보통 다음과 같은 순서를 따릅니다:
+1. 상태관리 (Redux, Recoil 등)
+2. 데이터 Fetch (QueryClientProvider)
+3. 인터셉터 등 Axios 관련 (AxiosInterceptor)
+4. 인증 (AuthProvider)
+5. UI 단 (ThemeProvider, ToastProvider 등)
+6. 라우터 (RouterProvider는 App 내부)
+

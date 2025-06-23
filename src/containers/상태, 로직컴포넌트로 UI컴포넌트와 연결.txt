@@ -1,0 +1,24 @@
+상태를 관리(useState, useEffect, useQuery, context 등)하는 컴포넌트로 UI컴포넌트와 데이터를 연결하여 사용
+
+※ 컨테이너 컴포넌트는 일반적으로 페이지나 기능 단위로 나누는 게 좋습니다.
+
+1. 기능/화면별로 분리
+각각의 페이지나 섹션 단위로 컨테이너 생성
+
+프레젠테이셔널 컴포넌트(components/)와 연결됨
+src/
+└── containers/
+    ├── Survey/
+    │   └── SurveyPageContainer.tsx
+    │   └── SurveyStepContainer.tsx
+    ├── User/
+    │   └── UserListContainer.tsx
+    │   └── UserDetailContainer.tsx
+
+2. 페이지 라우트 기준으로 분리 (Next.js나 SPA에 적합)
+src/
+└── containers/
+    ├── HomeContainer.tsx
+    ├── LoginContainer.tsx
+    ├── SurveyApplyContainer.tsx
+    └── SurveyResultContainer.tsx

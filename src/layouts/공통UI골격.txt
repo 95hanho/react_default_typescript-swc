@@ -1,0 +1,1 @@
+페이지 그룹별로 다른 UI 구조 : AdminLayout, AuthLayout 등
