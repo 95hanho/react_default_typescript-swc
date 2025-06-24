@@ -5,16 +5,21 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd());
 
-	if (env.VITE_OUTDIR === "test") {
-		console.log("테스트url 버전 !!!!", env.VITE_BASEURL);
+	if (env.VITE_ENV === "dev") {
+		console.log("dev 버전 !!!! API서버 :", env.VITE_API_BASE_URL);
 	}
 	return {
 		plugins: [react()],
 		define: {
 			"process.env": {
-				VITE_BASEURL: env.VITE_BASEURL,
-				VITE_OUTDIR: env.VITE_OUTDIR,
+				VITE_API_BASE_URL: env.VITE_API_BASE_URL,
+				VITE_ENV: env.VITE_ENV,
 			},
 		},
+		build: {
+			outDir: env.VITE_BUILD_DIR,
+			copyPublicDir: true,
+		},
+		base: env.VITE_BASE_URL,
 	};
 });

@@ -8,7 +8,7 @@ export default function AppProvider({ children }: Readonly<{ children: React.Rea
 			<AuthProvider>
 				<AxiosInterceptor>{children}</AxiosInterceptor>
 			</AuthProvider>
-			{import.meta.env.VITE_OUTDIR == "test" && (
+			{import.meta.env.VITE_ENV == "dev" && (
 				/* 데이터확인용 */
 				<ReactQueryDevtools />
 			)}
