@@ -4,7 +4,7 @@
 const test_auth = "/bapi/auth";
 const test_board = "/bapi/board";
 
-export const API_URL = {
+export const ENDPOINTS = {
 	// 테스트
 	TEST_USER: test_auth, // 유저정보가져오기, 로그인
 	TEST_ID_DUPL_CHECK: test_auth + "/id", // 아이디중복확인

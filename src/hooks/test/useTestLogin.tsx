@@ -1,7 +1,7 @@
 /* 테스트 로그인 */
 import { useMutation, type UseMutationResult } from "@tanstack/react-query";
-import { post_urlFormData } from "../../api/apiFilter";
-import { API_URL } from "../../api/endpoints";
+import { post_urlFormData } from "../../api/axiosFilter";
+import { ENDPOINTS } from "../../api/endpoints";
 import { AxiosError } from "axios";
 import type { LoginData } from "../../types/auth";
 
@@ -21,6 +21,6 @@ export default function useTestLogin(): UseMutationResult<
 	LoginData // 입력 타입
 > {
 	return useMutation({
-		mutationFn: async (obj: LoginData) => (await post_urlFormData(API_URL.TEST_USER, { ...obj })).data,
+		mutationFn: async (obj: LoginData) => (await post_urlFormData(ENDPOINTS.TEST_USER, { ...obj })).data,
 	});
 }

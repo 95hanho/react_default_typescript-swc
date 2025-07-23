@@ -10,7 +10,7 @@ interface RetryableAxiosRequestConfig extends InternalAxiosRequestConfig {
 
 let isRefreshing = false; // 재발급 중인지
 let requestQueue: ((token: string) => void)[] = []; // 처리 못 한 요청함수들을 저장
-const isBearerRequired = false; // Bearer 필요 여부를 조건으로 제어
+const isBearerRequired = true; // Bearer 필요 여부를 조건으로 제어
 
 export default function AxiosInterceptor({ children }: { children: React.ReactNode }) {
 	const location = useLocation();

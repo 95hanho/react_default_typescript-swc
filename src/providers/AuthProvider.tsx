@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useTestUserToken from "../hooks/test/useTestUserToken";
-import { isTokenExpired } from "../libs/auth";
+import { isJwtTokenExpired } from "../libs/auth";
 import { authContext } from "../contexts/authContext";
 import { getCookie, hasCookie, removeCookie, setCookie } from "../libs/cookie";
 import { useNavigate } from "react-router-dom";
@@ -40,7 +40,7 @@ export default function AuthProvider({ children }: Readonly<{ children: React.Re
 		// console.log("reissueAccessToken =>", rToken);
 
 		return new Promise((resolve, reject) => {
-			if (!rToken || isTokenExpired(rToken)) {
+			if (!rToken || isJwtTokenExpired(rToken)) {
 				logout();
 				navigate("/");
 				reject("Refresh token expired");
